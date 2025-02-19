@@ -1,0 +1,44 @@
+// RotateString
+
+public class Experiment_4 {
+ public boolean rotateString(String s, String goal) {
+ if (s.length() != goal.length()) {
+ return false;
+ }
+
+ String concatenated = s + s;
+ return concatenated.contains(goal);
+ }
+
+ public static void main(String args[]) {
+ String s = "abcde";
+ String goal = "cdeab";
+
+ Experiment_4 obj = new Experiment_4();
+ boolean result = obj.rotateString(s, goal);
+ System.out.println(result);
+ } 
+}
+
+// FirstOccurrence
+
+public class Experiment_4 {
+    public int strStr(String haystack, String needle) {
+        if (haystack == null || needle == null)
+            return -1;
+        if (needle.isEmpty())
+            return 0;
+        return haystack.indexOf(needle);
+    }
+
+    public static void main(String[] args) {
+        String param_1 = "hello";
+        String param_2 = "ll";
+
+        Experiment_4 obj = new Experiment_4();
+        int ret = obj.strStr(param_1, param_2);
+
+        System.out.println(ret);
+    }
+
+}
